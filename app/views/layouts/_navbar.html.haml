@@ -1,0 +1,26 @@
+%nav.navbar.navbar-default
+  -#.container-fluid
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#bs-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle Navigation
+        %span.icon-bar
+        %span.icon-bar
+      .navbar-brand= link_to "Photogram", root_path
+      -#%ul.nav.navbar-nav
+      -#  %li
+      -#    %a{:href => "#"}
+      -#      Link
+      -#      %span.sr-only (current)
+      -#  %li
+      -#    %a{:href => "#"} Link
+    .collapse.navbar-collapse#bs-navbar-collapse-1
+      %ul.nav.navbar-nav.navbar-right
+        %li.active
+          = link_to "New Post", new_post_path
+        %li
+          = link_to "Login", '#'
+        %li
+          = link_to "Register", '#'
+
+
