@@ -21,3 +21,7 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore xml file created by jetbrain
+.idea/**/workspace.xml
+.idea/**
