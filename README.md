@@ -3,8 +3,6 @@
 
 Part 1 - CRUD Posts & Insta Forgery
 
-Part 1 - Test Driven
-
 Part 2 - Users & Comments
 
 Part 2 - Test Driven
