@@ -20,7 +20,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'haml'
 
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+# gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip", "~> 5.0.0"
 
 gem "aws-sdk", "~> 2"
 
@@ -54,6 +55,8 @@ group :development, :test do
 end
 
 group :development do
+  # Add a comment summarizing the current schema
+  gem 'annotate'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
