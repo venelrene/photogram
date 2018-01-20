@@ -9,14 +9,15 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- * require_tree .
- * require_self
- */
+
+* require_tree .
+* require_self
+*/
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 
 html {
   height: 100%;
@@ -100,6 +101,7 @@ body {
 
 .post-bottom {
   .user-name, .comment-content {
+    color: #36312c;
     display: inline;
   }
   .caption {
@@ -107,7 +109,6 @@ body {
   }
   .user-name {
     font-weight: 500;
-    margin-right: 0.3em;
     color: #125688;
     font-size: 15px;
   }
@@ -120,18 +121,17 @@ body {
       font-weight: 500;
       margin-right: 0.3em;
     }
-    .delete-comment {
+    .delete-comment-icon {
       float: right;
       color: #515151;
     }
   }
   margin-bottom: 7px;
-  padding-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 10px;
   font-size: 15px;
-  line-height: 18px;
+  line-height: 24px;
 }
 
 .comment_content {
@@ -162,29 +162,23 @@ body {
 }
 
 .registration-bg {
-  padding-top: 12em;
-  padding-bottom: 12em;
+  padding-top: 4em;
   height: 100%;
-  background-image: url(pretoria-south-africa.jpg);
-  //-moz-background-size: cover;
-  //-webkit-background-size: cover;
-  //-o-background-size: cover;
+  background-image: image-url('regbackg.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .login-bg {
-  padding-top: 12em;
-  padding-bottom: 12em;
+  padding-top: 4em;
   height: 100%;
-  background-image: url(ball-is-life-brazil.jpg);
-  //-moz-background-size: cover;
-  //-webkit-background-size: cover;
-  //-o-background-size: cover;
+  background-image: image-url('loginbg.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-}
-
-.input-lg {
-  width: 100%;
 }
 
 .log-in{
@@ -205,10 +199,123 @@ body {
 }
 
 #image-preview {
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 #post_image {
   padding: 1em;
   margin: 0px auto;
+}
+
+
+#paginator {
+  color: #4090DB;
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: table;
+  border: 2px solid #4090DB;
+  border-radius: 50%;
+  :hover {
+    border: 1px solid #2D6DA8;
+    border-radius: 50%;
+  }
+}
+
+#load_more {
+  display: table-cell;
+  font-size: 12px;
+  padding: 0px 9px;
+  vertical-align: middle;
+  text-decoration: none;
+  a :hover {
+    color: #2D6DA8;
+  }
+}
+
+.comments {
+  .paginator {
+    margin: 0.5em;
+    .more-comments {
+      color: #A5A7AA;
+    }
+  }
+}
+
+.comment-submit-button {
+  position: absolute;
+  left: -9999px;
+}
+
+.profile-header {
+  padding: 20px 0;
+}
+
+.profile-image {
+  margin: 20px auto;
+  height: 152px;
+  width: 152px;
+}
+
+.user-name-and-follow {
+  display: inline;
+}
+
+.profile-user-name {
+  display: inline;
+}
+
+.edit-button {
+  border-color: #818488;
+  color: #818488;
+  margin-left: 20px;
+}
+
+.profile-bio {
+  margin-top: 20px;
+}
+
+#user_bio {
+  border: 1px solid gray;
+}
+
+#user_avatar {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+.likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
+  color: #4b4f54;
+}
+
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
+}
+
+// NOTIFICATIONS
+
+.notification-dropdown {
+  margin-top: 10px;
+  button {
+    border: none;
+  }
+}
+
+.notification-index-list {
+  margin-top: 5em;
+  list-style: none;
+  li {
+    margin-top: 1em;
+    background-color: white;
+    padding: 1em;
+  }
 }
