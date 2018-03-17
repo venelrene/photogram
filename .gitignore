@@ -25,3 +25,8 @@
 # Ignore xml file created by jetbrain
 .idea/**/workspace.xml
 .idea/**
+
+.env
+# Ignore application configuration
+/config/application.yml
+/config/cloudinary.yml
