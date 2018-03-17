@@ -21,7 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'haml'
 
 # gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.0"
 
 gem "aws-sdk", "~> 2"
 
