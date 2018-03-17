@@ -4,8 +4,8 @@ class ProfilesController < ApplicationController
   before_action :owned_profile, only: [:edit, :update]
 
   def show
-    # @posts = @user.posts.order('created_at DESC')
-    @posts = User.find_by(user_name: params[:user_name]).posts.order('created_at DESC')
+    @posts = @user.posts.order('created_at DESC')
+    # @posts = User.find_by(user_name: params[:user_name]).posts.order('created_at DESC')
   end
 
   def edit
