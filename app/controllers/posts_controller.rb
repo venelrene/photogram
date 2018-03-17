@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:success] = "Your post have been created!"
-      redirect_to root_path
+      redirect_to profile_path(current_user.user_name)
     else
       flash[:alert] = "Your new post couldn't be created! Please check the form."
       render :new
@@ -45,7 +45,7 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       flash[:success] = "Your post have been updated!"
-      redirect_to(root_path(@post))
+      redirect_to(profile_path(current_user.user_name))
     else
       flash[:alert] = "Your new post couldn't be updated! Please check the form."
       render :edit

@@ -23,6 +23,12 @@ gem 'haml'
 # gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem "paperclip", "~> 5.2.0"
 
+# another image gem for heroku
+gem 'cloudinary'
+# so cloudonary can work with paperclip
+gem 'paperclip-cloudinary'
+
+
 gem "aws-sdk", "~> 2"
 
 gem 'simple_form'
