@@ -15,6 +15,16 @@ class PostsController < ApplicationController
   def show
   end
 
+  def like
+    if @post.liked_by current_user
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.js
+      end
+    end
+
+  end
+
   def create
 
     @post = current_user.posts.build(post_params)

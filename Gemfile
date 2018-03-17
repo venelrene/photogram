@@ -27,6 +27,7 @@ gem "aws-sdk", "~> 2"
 
 gem 'simple_form'
 
+
 gem 'bootstrap-sass', '~> 3.3.7'
 
 gem 'jquery-rails'
@@ -38,6 +39,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
+gem 'acts_as_votable'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
