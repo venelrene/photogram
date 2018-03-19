@@ -31,7 +31,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  has_attached_file :avatar, styles: { medium: '152x152#' }
+  has_attached_file :avatar,
+                    :storage => :cloudinary,
+                    styles: { medium: '152x152#' },
+                    :path => ':id/:style/:filename'
+
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
 end
