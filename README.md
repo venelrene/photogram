@@ -8,3 +8,5 @@ Part Two - User functionality with registration and sign-in forms. Also, Adding 
 Part Three - We paginate our posts and comments and also create beautiful registration and login forms
 
 Part Four - Unable to tell one user from another, we created profile pages for everyone! Users can customise their bios and avatars.
+
+Part Five (Step One) - Adding likes to our users posts.
