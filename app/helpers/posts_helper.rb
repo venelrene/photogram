@@ -1,4 +1,16 @@
 module PostsHelper
+  
+  def display_likes(post)
+    votes = post.votes_for.up.by_type(User)
+    return list_likers(votes) if votes.size <= 8
+    count_likers(votes)
+  end
+
+  def liked_post(post)
+    return 'glyphicon-heart' if current_user.voted_for? post
+    'glyphicon-heart-empty'
+  end
+
   # Our new helper method
   def likers_of(post)
     # votes variable is set to the likes by users.
@@ -17,6 +29,12 @@ module PostsHelper
       # present the array as a nice sentence using the as_sentence method and also make it usable within our html.  Then call the like_plural method with the votes variable we set earlier as the argument.
       user_names.to_sentence.html_safe + like_plural(votes)
     end
+
+    def liked_post(post)
+      return 'glyphicon-heart' if current_user.voted_for? post
+      'glyphicon-heart-empty'
+    end
+
   end
 
   private
